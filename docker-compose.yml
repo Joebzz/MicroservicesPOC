@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  catalogmicroservice:
+    image: ${DOCKER_REGISTRY-}catalogmicroservice
+    build:
+      context: .
+      dockerfile: src\services\CatalogMicroservice\Dockerfile
+
+  helloworldmicroservice:
+    image: ${DOCKER_REGISTRY-}helloworldmicroservice
+    build:
+      context: .
+      dockerfile: src\services\HelloWorldMicroservice\Dockerfile
+
+  usermicroservice:
+    image: ${DOCKER_REGISTRY-}usermicroservice
+    build:
+      context: .
+      dockerfile: src\services\UserMicroservice\Dockerfile
+
+  testworkerservice:
+    image: ${DOCKER_REGISTRY-}testworkerservice
+    build:
+      context: .
+      dockerfile: src\worker-services\TestWorkerService\Dockerfile
+      
+  ocelotgateway:
+    image: ${DOCKER_REGISTRY-}ocelotgateway
+    build:
+      context: .
+      dockerfile: src\gateways\OcelotGateway\Dockerfile
+
+  identityserver:
+    image: ${DOCKER_REGISTRY-}identityserver
+    build:
+      context: .
+      dockerfile: src\IdentityServer\Dockerfile

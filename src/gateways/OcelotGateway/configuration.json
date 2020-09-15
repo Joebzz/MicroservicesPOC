@@ -1,0 +1,80 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/catalog",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalogmicroservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/catalog",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "SwaggerKey": "catalog",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "usermicroservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "users"
+    },
+    {
+      "DownstreamPathTemplate": "/helloworld",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "helloworldmicroservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/helloworld",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "helloworld"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "catalog",
+      "Config": [
+        {
+          "Name": "Catalog API",
+          "Version": "v1",
+          "Url": "http://catalogmicroservice/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "users",
+      "Config": [
+        {
+          "Name": "Users API",
+          "Version": "v1",
+          "Url": "http://usermicroservice/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "helloworld",
+      "Config": [
+        {
+          "Name": "HelloWorld API",
+          "Version": "v1",
+          "Url": "http://helloworldmicroservice/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {}
+}
