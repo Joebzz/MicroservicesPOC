@@ -9,7 +9,6 @@ namespace CatalogMicroservice.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
     public class CatalogController : Controller
     {
         private static List<CatalogItem> _catalogItems = new List<CatalogItem>

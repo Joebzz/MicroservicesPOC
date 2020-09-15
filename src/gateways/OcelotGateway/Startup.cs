@@ -29,7 +29,7 @@ namespace OcelotGateway
             Action<IdentityServerAuthenticationOptions> options = o =>
             {
                 o.RequireHttpsMetadata = false;
-                o.Authority = "https://identityserver";
+                o.Authority = "http://identityserver";
                 o.ApiName = "GatewayAPI";
                 o.SupportedTokens = SupportedTokens.Both;
             };
@@ -56,6 +56,7 @@ namespace OcelotGateway
             });
 
             app.UseAuthentication();
+            app.UseAuthorization();
             await app.UseOcelot();
         }
     }

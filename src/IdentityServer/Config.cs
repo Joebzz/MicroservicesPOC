@@ -90,7 +90,6 @@ namespace IdentityServer
                     ClientId = "APITesting",
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
                     RequireConsent = false,
-
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())

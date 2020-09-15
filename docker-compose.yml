@@ -30,6 +30,10 @@ services:
     build:
       context: .
       dockerfile: src\gateways\OcelotGateway\Dockerfile
+    depends_on:
+      - identityserver
+    links: 
+      - identityserver
 
   identityserver:
     image: ${DOCKER_REGISTRY-}identityserver
