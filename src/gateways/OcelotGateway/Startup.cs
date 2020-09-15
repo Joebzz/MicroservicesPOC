@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using OcelotGateway.Middlewares;
 using System;
 
 namespace OcelotGateway
@@ -54,6 +55,8 @@ namespace OcelotGateway
             {
                 opt.PathToSwaggerGenerator = "/swagger/docs";
             });
+            
+            app.UseMiddleware<RequestResponseLoggingMiddleware>();
 
             app.UseAuthentication();
             app.UseAuthorization();
