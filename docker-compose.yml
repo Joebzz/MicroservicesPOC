@@ -25,6 +25,12 @@ services:
       context: .
       dockerfile: src\worker-services\TestWorkerService\Dockerfile
       
+  testscheduledtask:
+    image: ${DOCKER_REGISTRY-}testscheduledtask
+    build:
+      context: .
+      dockerfile: src\worker-services\TestScheduledTask\Dockerfile
+
   ocelotgateway:
     image: ${DOCKER_REGISTRY-}ocelotgateway
     build:

@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleClientDemo", "demos\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "src\IdentityServer\IdentityServer.csproj", "{AAA00F89-3299-4FD8-BD34-8D8332AD6BF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScheduledTask", "src\worker-services\TestScheduledTask\TestScheduledTask.csproj", "{F1BA62CA-BB93-4C79-B497-7B0B91BFCE47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{AAA00F89-3299-4FD8-BD34-8D8332AD6BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAA00F89-3299-4FD8-BD34-8D8332AD6BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAA00F89-3299-4FD8-BD34-8D8332AD6BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BA62CA-BB93-4C79-B497-7B0B91BFCE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BA62CA-BB93-4C79-B497-7B0B91BFCE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BA62CA-BB93-4C79-B497-7B0B91BFCE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BA62CA-BB93-4C79-B497-7B0B91BFCE47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{E03E98F5-0698-4A7D-935F-7CE778B78C2A} = {D37514FB-38AC-48CE-8CAA-0C8F2175DF7C}
 		{B930259C-493F-4E63-92D6-33D4421826FC} = {926D8460-4E85-4F33-BBEA-9CA1BE0B559C}
 		{AAA00F89-3299-4FD8-BD34-8D8332AD6BF2} = {360FADA6-9388-43CD-B16C-12AFA242661C}
+		{F1BA62CA-BB93-4C79-B497-7B0B91BFCE47} = {D37514FB-38AC-48CE-8CAA-0C8F2175DF7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {889B1955-ABDF-4EC4-A964-D6E9087CF2A4}
